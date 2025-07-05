@@ -15,16 +15,16 @@ gastosdeagua = 0
 
 while True:
     print(Fore.YELLOW + "=== MENÚ DE OPCIONES ===" + Style.RESET_ALL)
-    print("1. Incluir")
-    print("2. Consultar")
-    print("3. Modificar")
-    print("4. Borrar")
+    print("1. Opcion para Ingresos y Gastos ")
+    print("2. opcion para Consultar Datos totales")
+    print("3. Opcion para Modificar Ingresos y gastos")
+    print("4. Opcion para Borrar la informacion ingresada ")
     print("5. Salir")
 
     opcion = input(Fore.BLUE + "Seleccione una opción (1-5): \r\n " + Style.RESET_ALL )
 
     if opcion == "1":
-        print(Fore.GREEN +"Elegiste la opción: Incluir datos"+ Style.RESET_ALL)
+        print(Fore.GREEN +"Elegiste la opción: Ingresos y Gastos "+ Style.RESET_ALL)
         precioventa = int(input("¿Cuál es el precio de venta de los huevos por unidad? \r\n"))
         cantidadhuevos = int(input("¿Cuál fue la cantidad de huevos producidos esta semana? \r\n"))
         gastosmantenimeinto = int(input("¿Cuántos fueron los gastos por mantenimiento? \r\n"))
@@ -32,7 +32,7 @@ while True:
         print(Fore.GREEN + "Datos incluidos correctamente." + Style.RESET_ALL )
 
     elif opcion == "2":
-        print(Fore.GREEN +"Has elegido consultar datos."+ Style.RESET_ALL)
+        print(Fore.GREEN +"Has elegido consultar datos totales."+ Style.RESET_ALL)
         if precioventa != 0 and cantidadhuevos != 0:
             resultadoventa = precioventa * cantidadhuevos
             totalgastos = gastosmantenimeinto + gastosdeagua
@@ -43,7 +43,7 @@ while True:
             print(Fore.RED + "Primero debes incluir los datos en la opción 1." + Style.RESET_ALL)
 
     elif opcion == "3":
-        print(Fore.GREEN +"Has elegido modificar datos."+ Style.RESET_ALL)
+        print(Fore.GREEN +"Has elegido modificar Ingresos y Gastos."+ Style.RESET_ALL)
         precioventa = int(input("Nuevo precio de venta: \r\n"))
         cantidadhuevos = int(input("Nueva cantidad de huevos: \r\n"))
         gastosmantenimeinto = int(input("Nuevos gastos de mantenimiento: \r\n"))
